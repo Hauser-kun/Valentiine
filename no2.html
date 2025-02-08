@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ek Aur Baar Soch Le! 💕</title>
+    <title>Ek Choti socha hai! 💕</title>
 
     <link rel="stylesheet" href="/css/style.css">
     <style>
@@ -45,7 +45,6 @@
 
         h1 {
             font-size: 32px;
-            /* font-family: 'Pacifico', cursive; */
             color: white;
             margin-top: 20px;
             text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
@@ -64,6 +63,8 @@
         .btn {
             display: flex;
             gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .btn a {
@@ -119,6 +120,45 @@
             100% {
                 transform: translateY(-100vh);
                 opacity: 0;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .btn a {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            .btn a {
+                font-size: 14px;
+                padding: 8px 16px;
             }
         }
     </style>
