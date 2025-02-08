@@ -36,6 +36,8 @@
             box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
             text-align: center;
             max-width: 500px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         img {
@@ -87,13 +89,33 @@
         .btn a:hover {
             transform: scale(1.1);
         }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .btn {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn a {
+                width: 80%;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .btn a {
+                font-size: 14px;
+                width: 90%;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <img src="gifs/please bebe.gif" alt="Begging GIF">
         <h1></h1>
-        <p>You know right how much I love you 🥺</p>
+        <p>You are everything i want in my life 🥺</p>
 
         <div class="btn">
             <a href="yes.html">Yes 😍</a>
@@ -105,7 +127,7 @@
         const noBtn = document.getElementById('move-random');
 
         noBtn.addEventListener('mouseover', () => {
-            // Ensure button stays fully inside the screen
+            // Ensure button stays fully inside the screen, considering smaller screen sizes
             const maxX = window.innerWidth - noBtn.offsetWidth - 20; // 20px margin from edges
             const maxY = window.innerHeight - noBtn.offsetHeight - 20; // 20px margin from edges
 
